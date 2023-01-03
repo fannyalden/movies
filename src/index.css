@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family:Roboto, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container {
+  text-align: center;
+}
+
+h1{
+  color: #008CBA;
+}
+
+.btn-load {
+  width: 150px;
+  height: 52px;
+  font-size: medium;
+  font-weight: 600;
+  color: white;
+  background-color: #008CBA;
+  border: 1px solid #008CBA;
+}
+
+.btn-load:hover {
+  color: #008CBA;
+  background-color: white;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  display: none;
+}
+
+input {
+  width: 350px;
+  min-width: 150px;
+  height: 50px;
+  padding: 0px 10px;
+  background-color: rgb(240, 239, 239);
+  border: 1px solid #008CBA;
+}
+
+.movies {
+  margin: 20px auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 50%;
+  height: auto;
+  position: relative;
+}
+
+@media screen and (min-width: 450px) {
+  .movie {
+    width: 33%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .movie {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .movie {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .movie {
+    width: 16.6667%;
+  }
+}
+
+.movie__info {
+  opacity: 1;
+  height: auto;
+  margin: 5px ;
+}
+
+.movie__image {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.movie__subject {
+  display: flex;
+  font-weight: 700;
+  margin: 5px;
+}
+
+.movie__subject--header {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: large;
+  margin: 10px;
+}
+
+.movie__subject--label {
+  width: 50%;
+  text-align: right;
+  padding: 0 5px 0 0;
+}
+
+.movie__subject--value {
+  width: 50%;
+  text-align: left;
+}
+
+.movie__subject--overview {
+  display: none;
+}
+
+
+@media screen and (min-width: 768px) {
+  .movie__info {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .movie:hover .movie__info {
+    animation: opacity 1s ease-in-out ;
+    opacity: 1;
+  }
+  
+  .movie__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+@media screen and (min-width: 1600px) {
+  .movie__subject--overview {
+    display: block;
+    margin: 15px;
+    text-align: left;
+    overflow-y: auto;
+  }
+}
+
